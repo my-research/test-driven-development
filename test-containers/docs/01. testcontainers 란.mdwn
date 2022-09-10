@@ -1,0 +1,19 @@
+# Testcontainers
+
+- docker container 에서 구동시킬 수 있는 모든 환경을 쉽게 구성해서 JUnit 테스트를 돕는 자바 라이브러리
+- 다음과 같은 상황에서 사용할 수 있음
+  - DB 통합 테스트
+  - 애플리케이션 통합 테스트
+  - 인수 테스트
+  - 등등
+- prerequisites
+  - docker
+  - junit5 jupiter or junit4 or spock
+
+```groovy
+testImplementation "org.testcontainers:postgresql:1.17.3"
+```
+
+### References
+
+- [https://www.testcontainers.org/quickstart/junit_5_quickstart/](https://www.testcontainers.org/quickstart/junit_5_quickstart/)

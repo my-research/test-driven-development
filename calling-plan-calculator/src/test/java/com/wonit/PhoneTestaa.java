@@ -1,14 +1,11 @@
 package com.wonit;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
-import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.List;
 import org.junit.jupiter.api.Test;
 
-class PhoneTest {
+class PhoneTestaa {
 
     public static final LocalDateTime NOW = LocalDateTime.now();
     Phone sut = new Phone();
