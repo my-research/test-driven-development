@@ -1,5 +1,5 @@
 package com.github.dhslrl321;
 
-public enum Abc {
+public enum Hands {
     SCISSORS, PAPER, ROCK
 }

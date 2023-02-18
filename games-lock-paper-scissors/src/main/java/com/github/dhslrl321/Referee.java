@@ -1,11 +1,15 @@
 package com.github.dhslrl321;
 
-import static com.github.dhslrl321.Abc.*;
+import static com.github.dhslrl321.Hands.*;
 import static com.github.dhslrl321.Result.*;
+import static java.util.Objects.nonNull;
+import static org.valid4j.Validation.validate;
 
 public class Referee {
-    public Result judge(Abc first, Abc second) {
-        // TODO 여기 리팩토링서부터 다시 시작 maybe handler?
+    public Result judge(Hands first, Hands second) {
+
+        validate(nonNull(first) && nonNull(second), IllegalArgumentException.class);
+
         if (ROCK.equals(first)) {
             if (PAPER.equals(second)) return LOOSE;
             else if (ROCK.equals(second)) return DRAW;

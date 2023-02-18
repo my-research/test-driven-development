@@ -1,12 +1,12 @@
 package com.github.dhslrl321;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.github.dhslrl321.Abc.*;
+import static com.github.dhslrl321.Hands.*;
 import static com.github.dhslrl321.Result.*;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class RefereeTest {
 
@@ -38,7 +38,8 @@ class RefereeTest {
 
     @Test
     @DisplayName("만약 안내면? 혹은 이상한걸 내면?")
-    void todo() {
-
+    void tc4() {
+        assertThatThrownBy(() -> sut.judge(null, null))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 }
