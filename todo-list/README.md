@@ -2,8 +2,9 @@
 
 ### 회차
 
-- [1회차](#)
+- [1회차](https://github.com/my-research/test-driven-development/tree/master/todo-list/todo-1)
   - [youtube](https://www.youtube.com/watch?v=INEMDcdgPSI)
+
 
 # Todo List
 
