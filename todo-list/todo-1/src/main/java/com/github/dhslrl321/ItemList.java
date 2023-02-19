@@ -2,6 +2,7 @@ package com.github.dhslrl321;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class ItemList {
 
@@ -15,20 +16,20 @@ public class ItemList {
         items.add(item);
     }
 
-    public int countOf(States state) {
+    public int countOf(State state) {
         return (int) items.stream()
                 .filter(it -> state.equals(it.state()))
                 .count();
     }
 
-    public void remove(ItemId item) {
-        items.remove(0);
+    public void remove(ItemId id) {
+        items.removeIf(it -> it.getId().equals(id));
     }
 
     public Item getBy(ItemId id) {
         return items.stream()
                 .filter(it -> id.equals(it.getId()))
                 .findAny()
-                .get();
+                .orElseThrow(NoSuchElementException::new);
     }
 }

@@ -2,7 +2,7 @@ rootProject.name = 'test-drive-development'
 
 include 'calling-plan-calculator'
 include 'games-lock-paper-scissors'
-include 'todo-list'
+include 'todo-list:todo-1'
 
 include 'test-containers'
 

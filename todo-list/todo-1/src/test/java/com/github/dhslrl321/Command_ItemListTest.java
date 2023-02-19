@@ -7,15 +7,14 @@ import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
 
 import static com.github.dhslrl321.ItemId.idOf;
-import static com.github.dhslrl321.States.DONE;
-import static com.github.dhslrl321.States.TODO;
 import static com.github.dhslrl321.Title.titleOf;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class Command_ItemListTest {
+
     public static final Item ITEM_1 = new Item(idOf(1L), titleOf("밥 먹기"));
-    public static final Item ITEM_2 = new Item(idOf(1L), titleOf("밥 먹기"));
+    public static final Item ITEM_2 = new Item(idOf(2L), titleOf("밥 먹기"));
     public static final ItemId ID_1 = idOf(1L);
 
     ItemList sut;
@@ -48,5 +47,7 @@ class Command_ItemListTest {
         sut.remove(ID_1);
 
         assertThat(sut.size()).isEqualTo(1);
+        assertThatThrownBy(() -> sut.getBy(ID_1))
+                .isInstanceOf(NoSuchElementException.class);
     }
 }

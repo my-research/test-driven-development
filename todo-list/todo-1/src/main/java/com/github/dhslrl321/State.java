@@ -1,5 +1,5 @@
 package com.github.dhslrl321;
 
-public enum States {
+public enum State {
     PLAN, IN_PROGRESS, DONE, TODO
 }

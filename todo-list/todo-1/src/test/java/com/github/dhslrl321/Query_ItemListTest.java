@@ -7,15 +7,14 @@ import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
 
 import static com.github.dhslrl321.ItemId.idOf;
-import static com.github.dhslrl321.States.DONE;
-import static com.github.dhslrl321.States.TODO;
+import static com.github.dhslrl321.State.DONE;
+import static com.github.dhslrl321.State.TODO;
 import static com.github.dhslrl321.Title.titleOf;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class Query_ItemListTest {
     public static final Item ITEM_1 = new Item(idOf(1L), titleOf("밥 먹기"));
-    public static final Item ITEM_2 = new Item(idOf(1L), titleOf("밥 먹기"));
     public static final ItemId ID_1 = idOf(1L);
     public static final ItemId ID_2 = idOf(2L);
     public static final Title ANY = titleOf("밥 먹기");
@@ -54,7 +53,7 @@ class Query_ItemListTest {
         assertThat(sut.countOf(TODO)).isEqualTo(1);
         assertThat(sut.countOf(DONE)).isEqualTo(0);
 
-        item.done();
+        item.to(DONE);
         assertThat(sut.countOf(TODO)).isEqualTo(0);
         assertThat(sut.countOf(DONE)).isEqualTo(1);
     }
