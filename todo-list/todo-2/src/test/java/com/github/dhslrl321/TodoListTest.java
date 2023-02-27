@@ -36,6 +36,7 @@ class TodoListTest {
     @Test
     void name3() {
         sut = new TodoList();
+
         sut.add(new Item(1L));
         sut.add(new Item(2L));
 
