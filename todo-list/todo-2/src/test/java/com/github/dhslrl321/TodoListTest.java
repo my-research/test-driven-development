@@ -42,4 +42,5 @@ class TodoListTest {
 
         assertThat(sut.size()).isEqualTo(2);
     }
+
 }
