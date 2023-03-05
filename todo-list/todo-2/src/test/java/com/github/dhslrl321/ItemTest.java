@@ -14,7 +14,7 @@ class ItemTest {
 
     @BeforeEach
     void setUp() {
-        sut = new Item(1L);
+        sut = Item.newInstance(ItemId.of(1L), Title.of("A"));
 
         assertThat(sut.state()).isEqualTo(State.TODO);
     }

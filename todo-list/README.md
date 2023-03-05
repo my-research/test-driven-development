@@ -15,3 +15,8 @@
   - `IN_PROGRESS`
   - `DONE`
 - 모든 글을 출력할 수 있다
+
+# 변화된점
+
+- TODO Item 에 대한 factory 가 생겼다
+- 만약 저장된다면 Aggregate Root 는 누구일까 (Todo 인가 TodoItem 인가)

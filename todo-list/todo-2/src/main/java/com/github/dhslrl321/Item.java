@@ -2,23 +2,21 @@ package com.github.dhslrl321;
 
 import lombok.Getter;
 
-import static com.github.dhslrl321.State.TODO;
 import static org.valid4j.Validation.validate;
 
+@Getter
 public class Item {
 
-    @Getter
-    private long id;
-    private State state;
-    @Getter
-    private Title title;
-
-    public Item(long l) {
-        id = l;
-        state = TODO;
+    public static Item newInstance(ItemId id, Title title) {
+        return new Item(id, title, State.TODO);
     }
 
-    Item(Title title, State state) {
+    private final ItemId id;
+    private final Title title;
+    private State state;
+
+    private Item(ItemId id, Title title, State state) {
+        this.id = id;
         this.title = title;
         this.state = state;
     }
