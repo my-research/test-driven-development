@@ -3,6 +3,7 @@ package com.github.dhslrl321;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
 
 class TodoListTest {
 
@@ -14,11 +15,13 @@ class TodoListTest {
      */
     TodoList sut;
 
+    Item item = mock(Item.class);
+
     @Test
     void name() {
         sut = new TodoList();
 
-        sut.add(new Item(1L));
+        sut.add(item);
 
         assertThat(sut.size()).isEqualTo(1);
     }
@@ -27,20 +30,9 @@ class TodoListTest {
     void name2() {
         sut = new TodoList();
 
-        sut.add(new Item(1L));
-        sut.add(new Item(2L));
+        sut.add(item);
+        sut.add(item);
 
         assertThat(sut.size()).isEqualTo(2);
     }
-
-    @Test
-    void name3() {
-        sut = new TodoList();
-
-        sut.add(new Item(1L));
-        sut.add(new Item(2L));
-
-        assertThat(sut.size()).isEqualTo(2);
-    }
-
 }
