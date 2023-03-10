@@ -7,12 +7,6 @@ import static org.mockito.Mockito.mock;
 
 class TodoListTest {
 
-    /**
-     * todo item 들을 관리하는 책임
-     *  - 추가 x
-     *  - 삭제
-     *  - aggregation
-     */
     TodoList sut;
 
     Item item = mock(Item.class);
