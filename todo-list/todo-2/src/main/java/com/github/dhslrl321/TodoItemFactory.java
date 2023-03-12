@@ -1,6 +1,5 @@
 package com.github.dhslrl321;
 
-import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
 import static java.util.Objects.nonNull;
@@ -11,6 +10,6 @@ public class TodoItemFactory {
         validate(nonNull(title), IllegalArgumentException.class);
         validate(!title.getValue().isBlank(), IllegalArgumentException.class);
 
-        return Item.newInstance(ItemId.of(ZonedDateTime.now().toEpochSecond()), title);
+        return Item.newInstance(ItemId.of(System.currentTimeMillis()), title);
     }
 }

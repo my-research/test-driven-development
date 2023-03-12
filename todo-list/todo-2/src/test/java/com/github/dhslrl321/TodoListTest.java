@@ -13,9 +13,12 @@ class TodoListTest {
 
     Item item = mock(Item.class);
 
+    TodoListView view = new TodoListView();
+    TodoListObserver observer = new TodoListObserver(view);
+
     @BeforeEach
     void setUp() {
-        sut = new TodoList();
+        sut = new TodoList(observer);
     }
 
     @Test
@@ -23,6 +26,7 @@ class TodoListTest {
         sut.add(item);
 
         assertThat(sut.size()).isEqualTo(1);
+        assertThat(view.size()).isEqualTo(1);
     }
 
     @Test
@@ -31,5 +35,7 @@ class TodoListTest {
         sut.add(item);
 
         assertThat(sut.size()).isEqualTo(2);
+        assertThat(view.size()).isEqualTo(2);
     }
+
 }
