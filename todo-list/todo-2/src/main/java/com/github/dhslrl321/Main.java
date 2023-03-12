@@ -7,9 +7,11 @@ public class Main {
         TodoList list = new TodoList(observer);
         TodoItemFactory factory = new TodoItemFactory();
 
-        list.add(factory.todo(Title.of("밥 먹기")));
-        list.add(factory.todo(Title.of("라면 끓이기")));
-
+        Item item1 = factory.todo(Title.of("밥 먹기"));
+        list.add(item1);
+        Item item2 = factory.todo(Title.of("라면 끓이기"));
+        list.add(item2);
+        item1.transitionTo(State.DONE);
         view.show();
     }
 }

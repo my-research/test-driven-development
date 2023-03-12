@@ -4,6 +4,7 @@ import lombok.Value;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Value
 public class TodoListView {
@@ -16,7 +17,7 @@ public class TodoListView {
             String message = String.format("[TODO(%d)]: %s 가 현재 %s 상태",
                     it.getId().getValue(),
                     it.getTitle().getValue(),
-                    it.getState().name());
+                    Objects.equals(it.getState(), State.DONE) ? "✅" : it.getState());
 
             System.out.println(message);
         });
