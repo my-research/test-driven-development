@@ -4,7 +4,7 @@
 
 TDD 를 연습하기도 하며 Test 관련 툴 사용을 익히기도 합니다.
 
-## tdd projects
+## TDD projects
 
 - [전화 요금 계산기, calling-plan-calculator](#)
 - [가위바위보 게임, games-lock-paper-scissors](https://github.com/my-research/test-driven-development/tree/master/games-lock-paper-scissors)
