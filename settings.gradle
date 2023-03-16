@@ -2,8 +2,10 @@ rootProject.name = 'test-drive-development'
 
 include 'calling-plan-calculator'
 include 'games-lock-paper-scissors'
+
 include 'todo-list:todo-1'
 include 'todo-list:todo-2'
+include 'todo-list:todo-3'
 
 include 'test-containers'
 
