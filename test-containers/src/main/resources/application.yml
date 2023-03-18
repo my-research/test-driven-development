@@ -1,5 +1,0 @@
-spring:
-  datasource:
-    url: jdbc
-    username: sa
-    password: sa
