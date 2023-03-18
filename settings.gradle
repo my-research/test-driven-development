@@ -1,4 +1,4 @@
-rootProject.name = 'test-drive-development'
+rootProject.name = 'test-driven-development'
 
 include 'calling-plan-calculator'
 include 'games-lock-paper-scissors'
